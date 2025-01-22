@@ -3,7 +3,7 @@ import { LanguageContext } from '../../context/languagecontext';
 import logo from '../../assets/img/logo.png';
 import './header.css';
 
-// Componente para el icono de menú hamburguesa
+
 const MenuIcon = () => (
     <svg 
         width="18" 
@@ -18,7 +18,6 @@ const MenuIcon = () => (
     </svg>
 );
 
-// Componente para el icono X
 const CloseIcon = () => (
     <svg
         width="18"

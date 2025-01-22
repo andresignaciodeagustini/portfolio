@@ -1,4 +1,4 @@
-/* Estilos base y reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +10,9 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: #000000; /* Añadido para consistencia */
+  background-color: #000000;
 }
 
-/* Contenedor principal */
 .app {
   width: 100%;
   min-height: 100vh;
@@ -22,7 +21,6 @@ body {
   flex-direction: column; /* Añadido */
 }
 
-/* Secciones generales */
 .section {
 
   width: 100%;
@@ -32,15 +30,15 @@ body {
   align-items: center;
 }
 
-/* Excepción para la sección de contacto/footer */
+
 .footer {
   min-height: auto;
-  margin-top: auto; /* Añadido para empujar el footer al final */
+  margin-top: auto; 
   height: auto;
   padding: 80px 0 0;
 }
 
-/* Scrollbar personalizado */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -58,7 +56,6 @@ body {
   background: #555;
 }
 
-/* Cursor personalizado */
 .custom-cursor-outer,
 .custom-cursor-inner {
   position: fixed;
@@ -83,7 +80,7 @@ body {
   background-color: #000;
 }
 
-/* Media queries */
+
 @media (hover: none) and (pointer: coarse) {
   .custom-cursor-outer,
   .custom-cursor-inner {

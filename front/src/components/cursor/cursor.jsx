@@ -10,7 +10,6 @@ const Cursor = () => {
         const moveHandler = (e) => {
             setPosition({ x: e.clientX, y: e.clientY });
 
-            // Verificar si el cursor está sobre una sección oscura
             const element = document.elementFromPoint(e.clientX, e.clientY);
             const isOnDark = element?.closest('#expertise, #contact') !== null;
             setIsOnDarkSection(isOnDark);

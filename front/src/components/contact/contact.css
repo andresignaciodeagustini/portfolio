@@ -1,14 +1,13 @@
-/* contact.css */
+
 .footer {
     background-color: #000000;
-    padding: 80px 0 0; /* Eliminado el padding bottom */
+    padding: 80px 0 0;
     overflow: hidden;
-    position: relative; /* Añadido */
-    width: 100%; /* Añadido */
-    margin-bottom: 0; /* Añadido */
+    position: relative;
+    width: 100%; 
+    margin-bottom: 0; 
 }
 
-/* Marquee styles */
 .section-marquee {
     display: flex;
     white-space: nowrap;
@@ -25,13 +24,13 @@
     padding: 0 20px;
 }
 
-/* Container styles */
+
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px 40px; /* Añadido padding bottom */
-    position: relative; /* Añadido */
-    z-index: 1; /* Añadido */
+    padding: 0 20px 40px;
+    position: relative; 
+    z-index: 1; 
     transform: rotate(4deg);
 }
 
@@ -44,7 +43,7 @@
     align-items: center;
 }
 
-/* Social links styles - Sin cambios */
+
 .social-links-container {
     list-style: none;
     padding: 0;
@@ -91,7 +90,6 @@
     width: 100%;
 }
 
-/* Button styles - Sin cambios */
 .button-primary {
     background-color: #000000;
     color: #ffffff;
@@ -113,7 +111,6 @@
     color: #ffb1cd;
 }
 
-/* Añadido: Asegurar que no haya espacio en blanco */
 .footer::after {
     content: '';
     position: absolute;
@@ -124,7 +121,7 @@
     background-color: #000000;
 }
 
-/* Marquee animation - Sin cambios */
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -134,7 +131,7 @@
     }
 }
 
-/* Media queries - Actualizados */
+
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;

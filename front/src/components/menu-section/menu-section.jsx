@@ -5,7 +5,7 @@ import { LanguageContext } from '../../context/languagecontext';
 import * as THREE from 'three';
 import './menu-section.css';
 
-// Componente de fallback para la carga
+
 const LoadingFallback = () => {
     const { language, translations } = useContext(LanguageContext);
     const t = translations[language];
@@ -27,18 +27,16 @@ const ComplexSphere = () => {
     const sphereRef = useRef();
     const materialRef = useRef();
 
-    // Geometría más esférica y suave
     const geometry = new THREE.SphereGeometry(0.6, 128, 128);
 
     useFrame(({ clock }) => {
         const time = clock.getElapsedTime();
         
         if (sphereRef.current) {
-            // Rotación sobre su propio eje
+           
             sphereRef.current.rotation.y = time * 0.2;
             sphereRef.current.rotation.x = Math.sin(time * 0.2) * 0.1;
 
-            // Deformación orgánica más sutil y contenida
             const vertices = sphereRef.current.geometry.attributes.position.array;
             for (let i = 0; i < vertices.length; i += 3) {
                 const x = vertices[i];
@@ -55,7 +53,7 @@ const ComplexSphere = () => {
             }
             sphereRef.current.geometry.attributes.position.needsUpdate = true;
 
-            // Pulsación más sutil
+           
             const pulseFactor = Math.sin(time * 0.5) * 0.001;
             sphereRef.current.scale.set(
                 1 + pulseFactor,
@@ -63,12 +61,12 @@ const ComplexSphere = () => {
                 1 + pulseFactor
             );
 
-            // Movimiento más contenido sobre su propio eje
+           
             sphereRef.current.position.x = 0;
             sphereRef.current.position.y = 0;
             sphereRef.current.position.z = 0;
 
-            // Actualización del material para reflejo dinámico
+          
             if (materialRef.current) {
                 materialRef.current.roughness = 0.1 + Math.sin(time) * 0.05;
             }
@@ -91,7 +89,7 @@ const ComplexSphere = () => {
                     }]}
                 />
             </mesh>
-            {/* Sistema de iluminación mejorado */}
+           
             <ambientLight intensity={0.5} />
             <directionalLight 
                 position={[5, 5, 5]} 
@@ -107,7 +105,6 @@ const ComplexSphere = () => {
                 intensity={1}
                 color="#ffffff"
             />
-            {/* Luces adicionales para reflejos */}
             <pointLight
                 position={[10, 10, 10]}
                 intensity={1}

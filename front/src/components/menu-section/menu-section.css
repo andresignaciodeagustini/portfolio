@@ -14,7 +14,7 @@
 
 .animation-container {
     position: relative;
-    width: 550px;
+    width: 1500px;
     height: 550px;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
     height: 100% !important;
 }
 
-/* Texto deslizante */
+
 .sliding-text-container {
     position: absolute;
     width: 100vw;
@@ -38,7 +38,7 @@
     align-items: center;
     overflow: hidden;
     z-index: 2;
-    top: 25%; /* Ajustado para posicionar más arriba */
+    top: 25%; 
     left: 0;
 }
 
@@ -56,7 +56,6 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Descripción */
 .description-container {
     position: relative;
     text-align: center;
@@ -84,7 +83,7 @@
     margin-bottom: 2rem;
 }
 
-/* Botón */
+
 .know-more-btn {
     position: relative;
     padding: 1rem 2rem;
@@ -117,7 +116,7 @@
     }
 }
 
-/* Responsive */
+
 @media (max-width: 1200px) {
     .sliding-text {
         font-size: 8rem;
