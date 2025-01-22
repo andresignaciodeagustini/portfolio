@@ -8,11 +8,9 @@
   },
   "scripts": {
     "dev": "vite --force",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "clean": "rimraf node_modules/.vite dist",
-    "dev:clean": "npm run clean && npm run dev"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
@@ -40,6 +38,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "vite": "^6.0.5"
+    "vite": "^4.5.0",
+    "rollup": "^3.29.4"
   }
 }
