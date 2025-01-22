@@ -1,6 +1,6 @@
 // src/context/languagecontext.jsx
-import React from 'react';
+import { createContext } from 'react';
 
-const LanguageContext = React.createContext();
+const LanguageContext = createContext();
 
 export { LanguageContext };
