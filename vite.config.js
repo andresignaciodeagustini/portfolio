@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     force: true,
-    exclude: ['react-dnd', 'react-dnd-html5-backend'] // Excluye paquetes problemáticos si los hay
+    exclude: ['@rollup/rollup-linux-x64-gnu'] // Excluimos el paquete problemático
   },
   server: {
     hmr: true,
@@ -18,6 +18,14 @@ export default defineConfig({
     sourcemap: true,
     commonjsOptions: {
       include: []
-    }
+    },
+    rollupOptions: {
+      external: ['@rollup/rollup-linux-x64-gnu'],
+      output: {
+        manualChunks: undefined
+      }
+    },
+    target: 'es2015',
+    minify: 'esbuild'
   }
 })
