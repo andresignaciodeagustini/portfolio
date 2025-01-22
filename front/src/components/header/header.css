@@ -1,0 +1,357 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start; /* Cambiado */
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: -17%;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Añadido */
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header.on-dark .logo img {
+    filter: brightness(0) invert(1);
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    margin-right: 0; /* Modificado */
+    order: 2; /* Añadido */
+}
+
+.header-buttons.on-dark {
+    border: 1px solid #fff;
+}
+
+.get-in-touch-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 50px;
+    background: none;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    height: 55px;
+    outline: none;
+}
+
+.get-in-touch-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.get-in-touch-btn.on-dark {
+    border-color: #fff;
+    color: #fff;
+}
+
+.get-in-touch-btn.on-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.menu-btn {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.menu-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.menu-btn svg line {
+    stroke-width: 1px;
+}
+
+.menu-btn.on-dark {
+    border-color: #fff;
+    color: #fff;
+}
+
+.menu-btn.on-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    position: fixed;
+    top: 0;
+    right: -25%;
+    width: 25%;
+    height: 100vh;
+    background-color: #fff;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    padding-top: 80px;
+}
+
+.dropdown-menu.open {
+    right: 0;
+    top: 0;
+}
+
+.dropdown-menu nav {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 80px);
+    padding: 2rem 0;
+    position: relative;
+}
+
+.menu-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 2rem 2rem;
+    color: #000;
+}
+
+.dropdown-menu nav ul {
+    list-style: none;
+    padding: 0 0 0 2rem;
+    margin: 0;
+}
+
+.dropdown-menu nav ul li {
+    padding: 1rem 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    text-align: left;
+}
+
+.dropdown-menu nav ul li:hover {
+    color: #666;
+}
+
+.lets-talk-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    padding: 1rem 2rem;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lets-talk-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.close-menu-btn {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: auto;
+    margin-right: 2rem;
+    padding: 0;
+}
+
+.close-menu-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.close-menu-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.close-menu-btn svg line {
+    stroke: currentColor;
+    stroke-width: 1px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.header-right-container {
+    display: flex;
+    align-items: center;
+    
+    order: 2; /* Añadido */
+    margin-left: auto;
+}
+
+.language-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 0.25rem;
+    order: 3; /* Añadido */
+    margin-left: 2rem; /* Añadido */
+}
+
+.language-buttons.on-dark {
+    border-color: #fff;
+}
+
+.lang-btn {
+    padding: 0.15rem 0.25rem;
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    color: #000;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn.active {
+    border-color: #000;
+}
+
+.lang-btn:hover {
+    opacity: 0.8;
+}
+
+.language-buttons.on-dark .lang-btn {
+    color: #fff;
+}
+
+.language-buttons.on-dark .lang-btn.active {
+    border-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .menu-title {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+
+    .header-content {
+        margin-bottom: 0;
+    }
+
+    .lets-talk-btn {
+        bottom: 4rem;
+    }
+
+    .close-menu-btn {
+        margin-right: 1.5rem;
+    }
+    
+    .header-right-container {
+        margin-right: 0;
+    }
+
+    .language-buttons {
+        padding: 0.3rem;
+    }
+
+    .lang-btn {
+        padding: 0.3rem 0.8rem;
+        font-size: 12px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-title {
+        font-size: 1.8rem;
+    }
+
+    .dropdown-menu nav ul li {
+        font-size: 1.1rem;
+    }
+    
+    .header-right-container {
+        gap: 0.5rem;
+    }
+
+    .language-buttons {
+        padding: 0.2rem;
+    }
+
+    .lang-btn {
+        padding: 0.2rem 0.6rem;
+        font-size: 11px;
+        height: 25px;
+    }
+}

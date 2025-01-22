@@ -1,0 +1,174 @@
+/* contact.css */
+.footer {
+    background-color: #000000;
+    padding: 80px 0 0; /* Eliminado el padding bottom */
+    overflow: hidden;
+    position: relative; /* Añadido */
+    width: 100%; /* Añadido */
+    margin-bottom: 0; /* Añadido */
+}
+
+/* Marquee styles */
+.section-marquee {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 40px;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-heading-medium {
+    color: #ffb1cd;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Container styles */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px; /* Añadido padding bottom */
+    position: relative; /* Añadido */
+    z-index: 1; /* Añadido */
+    transform: rotate(4deg);
+}
+
+.footer-content {
+    background-color: #ffb1cd;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Social links styles - Sin cambios */
+.social-links-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    display: flex;
+    gap: 30px;
+}
+
+.social-link-hover-container {
+    position: relative;
+}
+
+.social-link {
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icon {
+    font-size: 24px;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link-border {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+}
+
+.social-link-hover-container:hover .social-link-border {
+    width: 100%;
+}
+
+/* Button styles - Sin cambios */
+.button-primary {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.button-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Añadido: Footer bottom styles */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    color: #ffb1cd;
+}
+
+/* Añadido: Asegurar que no haya espacio en blanco */
+.footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+}
+
+/* Marquee animation - Sin cambios */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Media queries - Actualizados */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .list-item {
+        justify-content: center;
+    }
+
+    .marquee-heading-medium {
+        font-size: 36px;
+    }
+
+    .footer-container {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .marquee-heading-medium {
+        font-size: 24px;
+    }
+
+    .footer-content {
+        padding: 20px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+}

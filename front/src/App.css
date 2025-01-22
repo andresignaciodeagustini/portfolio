@@ -1,0 +1,108 @@
+/* Estilos base y reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #000000; /* Añadido para consistencia */
+}
+
+/* Contenedor principal */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex; /* Añadido */
+  flex-direction: column; /* Añadido */
+}
+
+/* Secciones generales */
+.section {
+
+  width: 100%;
+  padding: 80px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Excepción para la sección de contacto/footer */
+.footer {
+  min-height: auto;
+  margin-top: auto; /* Añadido para empujar el footer al final */
+  height: auto;
+  padding: 80px 0 0;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Cursor personalizado */
+.custom-cursor-outer,
+.custom-cursor-inner {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-in-out,
+              height 0.3s ease-in-out,
+              opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.custom-cursor-outer {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+}
+
+.custom-cursor-inner {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+}
+
+/* Media queries */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor-outer,
+  .custom-cursor-inner {
+      display: none;
+  }
+  
+  * {
+      cursor: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+      padding: 60px 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+      padding: 40px 10px 10px;
+  }
+}

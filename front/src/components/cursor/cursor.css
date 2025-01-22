@@ -1,0 +1,63 @@
+/* cursor.css */
+.custom-cursor-outer,
+.custom-cursor-inner {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease-in-out,
+                height 0.3s ease-in-out,
+                opacity 0.3s ease-in-out,
+                border-color 0.3s ease-in-out,
+                background-color 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+.custom-cursor-outer {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+}
+
+.custom-cursor-inner {
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+}
+
+/* Estilos para cuando está sobre secciones oscuras */
+.custom-cursor-outer.on-dark {
+    border-color: #fff;
+}
+
+.custom-cursor-inner.on-dark {
+    background-color: #fff;
+}
+
+/* Estilos actualizados para el estado pointer */
+.custom-cursor-outer.pointer {
+    width: 40px;
+    height: 40px;
+}
+
+.custom-cursor-inner.pointer {
+    width: 12px;
+    height: 12px;
+}
+
+/* Combinación de estados pointer y on-dark */
+.custom-cursor-outer.pointer.on-dark {
+    border-color: #fff;
+}
+
+.custom-cursor-inner.pointer.on-dark {
+    background-color: #fff;
+}
+
+/* Mantener el cursor por defecto en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+    .custom-cursor-outer,
+    .custom-cursor-inner {
+        display: none;
+    }
+}
