@@ -1,4 +1,4 @@
 // src/context/languagecontext.jsx
-import React from 'react'; // Importamos React completo
+import { createContext } from 'react/jsx-runtime';
 
-export const LanguageContext = React.createContext(); // Usamos React.createContext
+export const LanguageContext = createContext();
