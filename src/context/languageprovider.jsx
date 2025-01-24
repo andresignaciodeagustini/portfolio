@@ -115,7 +115,7 @@ const LanguageProvider = ({ children }) => {
                 fullStackDev: "Desarrollo Full Stack",
                 fullStackAP: "Desarrollador Full Stack",
                 dataAnalysis: "Análisis de Datos con Python",
-                humanities: "Profesorado en Humanidades"
+                humanities: "Entrenador de Programación de IA"
             },
 
             projects: {
