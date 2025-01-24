@@ -15,17 +15,17 @@ const Expertise = () => {
         {
             role: t.roles.mediaAnalyst,
             company: "Media Matters",
-            period: "2022-2023"
+            period: "2022"
         },
         {
             role: t.roles.dataAnalysis,
             company: t.companies.dataEngineering,
-            period: "2022"
+            period: "2022-2023"
         },
         {
             role: t.roles.programmingTutor,
             company: "Loop Learning",
-            period: "2022"
+            period: "2022-2023"
         },
         {
             role: t.roles.teacher,
