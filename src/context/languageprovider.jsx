@@ -103,7 +103,7 @@ const LanguageProvider = ({ children }) => {
                 mediaAnalyst: "Analista de Medios",
                 dataAnalysis: "Ingeniero de Análisis de Datos",
                 programmingTutor: "Tutor de Programación",
-                teacher: "AI Programming Trainer"
+                teacher: "Entrenador de Programación de IA"
             },
             
             companies: {
