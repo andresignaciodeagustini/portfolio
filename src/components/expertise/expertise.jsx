@@ -29,8 +29,8 @@ const Expertise = () => {
         },
         {
             role: t.roles.teacher,
-            company: "Instituto Ortega y Gasset",
-            period: "2007-2015"
+            company: "Outlier",
+            period: "2024"
         }
     ];
 
