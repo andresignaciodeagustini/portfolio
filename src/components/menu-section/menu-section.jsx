@@ -123,6 +123,13 @@ const MenuSection = () => {
     const { language, translations } = useContext(LanguageContext);
     const t = translations[language];
 
+    const scrollToExpertise = () => {
+        const expertiseSection = document.getElementById('expertise');
+        if (expertiseSection) {
+            expertiseSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section id="menu" className="menu-section">
             <div className="animation-container">
@@ -174,7 +181,7 @@ const MenuSection = () => {
                 </p>
             </div>
 
-            <button className="know-more-btn">
+            <button className="know-more-btn" onClick={scrollToExpertise}>
                 {t.knowMoreBtn}
             </button>
         </section>

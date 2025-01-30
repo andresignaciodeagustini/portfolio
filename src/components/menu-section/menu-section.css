@@ -63,13 +63,13 @@
     z-index: 3;
     padding: 0 1rem;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 6rem;
 }
 
 .title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: rem;
     color: #000;
     font-family: 'Space Grotesk', sans-serif;
 }
