@@ -33,7 +33,7 @@ const Expertise = () => {
             period: "2022"
         },
         {
-            role: t.roles.teacher,
+            role: t.roles.developer,
             company: "Silverlight Research Expert Network",
             period: "2022"
         }
