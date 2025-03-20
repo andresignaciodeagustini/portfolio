@@ -30,7 +30,12 @@ const Expertise = () => {
         {
             role: t.roles.teacher,
             company: "Outlier",
-            period: "2024"
+            period: "2022"
+        },
+        {
+            role: t.roles.teacher,
+            company: "Silverlight Research Expert Network",
+            period: "2022"
         }
     ];
 
@@ -38,7 +43,7 @@ const Expertise = () => {
         {
             degree: t.education.fullStackEng,
             institution: "EducacionIT",
-            period: "2023 - 2024"
+            period: "2021 - 2022"
         },
         {
             degree: t.education.fullStackDev,
